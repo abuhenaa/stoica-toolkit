@@ -81,8 +81,10 @@ define('STOICA_DIR_URL', plugin_dir_url(__FILE__));
 	public function sa_register_widgets($widgets_manager ){
 
 		require_once STOICA_DIR_PATH .'inc/widgets/service-widget.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/stoica-icon-grid.php';
 
 		$widgets_manager->register( new ServiceWidget() );
+		$widgets_manager->register( new StoicaIconGrid() );
 		
 	}
 
