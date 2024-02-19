@@ -82,9 +82,15 @@ define('STOICA_DIR_URL', plugin_dir_url(__FILE__));
 
 		require_once STOICA_DIR_PATH .'inc/widgets/service-widget.php';
 		require_once STOICA_DIR_PATH .'inc/widgets/stoica-icon-grid.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/testimonial.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/image-navigator.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/accordion.php';
 
 		$widgets_manager->register( new ServiceWidget() );
 		$widgets_manager->register( new StoicaIconGrid() );
+		$widgets_manager->register( new StoicaTestimonial() );
+		$widgets_manager->register( new ImageNavigator() );
+		$widgets_manager->register( new StoicaAccordion() );
 		
 	}
 
