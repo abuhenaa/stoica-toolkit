@@ -28,7 +28,7 @@ class HeaderBreadcrumb extends \Elementor\Widget_Base {
         );
 
         $this->add_control(
-            'section_title',
+            'section_subtitle',
             [
                 'label'       => esc_html__('Section Subtitle', 'stoica-toolkit'),
                 'type'        => \Elementor\Controls_Manager::TEXT,

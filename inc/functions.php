@@ -72,6 +72,9 @@ function sa_slider_shortcode($atts, $content = null){
                         </div>
                         <?php
                     }
+                    wp_reset_postdata();
+                }else{
+                    echo esc_html('No slider found', 'stoica-toolkit');
                 }
                 ?>
               
@@ -79,7 +82,9 @@ function sa_slider_shortcode($atts, $content = null){
          </header>
 
     <?php
-    return ob_get_clean();
+    $html =  ob_get_clean();
+
+    return $html;
 }
 
 add_shortcode('sa_slider', 'sa_slider_shortcode');
