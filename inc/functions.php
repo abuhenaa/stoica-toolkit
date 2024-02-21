@@ -83,3 +83,47 @@ function sa_slider_shortcode($atts, $content = null){
 }
 
 add_shortcode('sa_slider', 'sa_slider_shortcode');
+
+//register sidebar
+register_sidebar(array(
+    'name'          => 'Footer Address Sidebar',
+    'id'            => 'footer-address-sidebar',
+    'description'   => 'Footer Address Sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
+));
+
+//Footer middle sidebar
+register_sidebar(array(
+    'name'          => 'Footer Middle Sidebar',
+    'id'            => 'footer-middle-sidebar',
+    'description'   => 'Footer Middle Sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
+));
+
+//footer left sidebar
+register_sidebar(array(
+    'name'          => 'Footer Left Sidebar',
+    'id'            => 'footer-left-sidebar',
+    'description'   => 'Footer Left Sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
+));
+
+//Footer bottom sidebar
+register_sidebar(array(
+    'name'          => 'Footer Bottom Sidebar',
+    'id'            => 'footer-bottom-sidebar',
+    'description'   => 'Footer Bottom Sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>',
+));

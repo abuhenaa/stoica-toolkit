@@ -38,6 +38,7 @@ define('STOICA_DIR_URL', plugin_dir_url(__FILE__));
 
  	public function __construct(){
  		require_once STOICA_DIR_PATH .'inc/functions.php';
+ 		require_once STOICA_DIR_PATH .'inc/widgets/wp-footer-address-widget.php';
 
 		//if compatible then init elementor
 		if( $this->is_compatible()){
@@ -84,13 +85,18 @@ define('STOICA_DIR_URL', plugin_dir_url(__FILE__));
 		require_once STOICA_DIR_PATH .'inc/widgets/stoica-icon-grid.php';
 		require_once STOICA_DIR_PATH .'inc/widgets/testimonial.php';
 		require_once STOICA_DIR_PATH .'inc/widgets/image-navigator.php';
-		require_once STOICA_DIR_PATH .'inc/widgets/accordion.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/accordion.php';		
+		require_once STOICA_DIR_PATH .'inc/widgets/header-breadcrumb.php';
+		require_once STOICA_DIR_PATH .'inc/widgets/image-slider-with-info.php';
+
 
 		$widgets_manager->register( new ServiceWidget() );
 		$widgets_manager->register( new StoicaIconGrid() );
 		$widgets_manager->register( new StoicaTestimonial() );
 		$widgets_manager->register( new ImageNavigator() );
 		$widgets_manager->register( new StoicaAccordion() );
+		$widgets_manager->register( new HeaderBreadcrumb() );
+		$widgets_manager->register( new StoicaImageSliderWithInfo() );
 		
 	}
 
