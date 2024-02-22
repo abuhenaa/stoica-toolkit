@@ -36,6 +36,15 @@ class StoicaIconGrid extends \Elementor\Widget_Base{
                 'default' => esc_html__( 'Your section title', 'stoica-toolkit' ),
             ],
         );
+        $this->add_control(
+            'section_subtitle',
+            [
+                'label' => esc_html__( 'Section Sub Title', 'stoica-toolkit' ),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'label_block' => true,
+                'default' => esc_html__( '', 'stoica-toolkit' ),
+            ],
+        );
 
         $repeater = new \Elementor\Repeater();
 
@@ -123,6 +132,9 @@ class StoicaIconGrid extends \Elementor\Widget_Base{
             <section class="bgc-gray-lightest">
                <div class="container text-center">
                   <p align="center" class="fz-3 " style="font-size: 25px; padding-top: 60px; line-height: 35px "><?php echo $section_title ?></p>
+                  <?php if(! empty($settings['section_subtitle'])): ?>
+                  <p class=" fz-3 " style="font-size: 18px; margin-top: 5px; line-height: 35px " align="center"> <?php echo $settings['section_subtitle'] ?>  </p>
+                  <?php endif; ?>
                   <div class="separator-2-color"></div>
                </div>
             </section>
